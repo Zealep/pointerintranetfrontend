@@ -1,0 +1,14 @@
+.container{
+  display: flex;
+}
+.container > {
+  flex-direction: column;
+}
+
+.title{
+  font-weight: bold;
+
+}
+.espacio {
+  height: 20px;
+}
