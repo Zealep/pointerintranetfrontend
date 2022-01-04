@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../../../services/authentication.service';
+import { Usuario } from '../../../models/usuario';
 
 @Component({
   selector: 'app-login',
@@ -9,11 +11,14 @@ import { AuthenticationService } from '../../../services/authentication.service'
 })
 export class LoginComponent implements OnInit {
 
-  username = ''
-  password = ''
   invalidLogin = false
 
-  @Input() error: string | null | undefined;
+  @Input() error: string | null | undefined ;
+
+  form: FormGroup = new FormGroup({
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
+  });
 
   constructor(private router: Router,
     private loginservice: AuthenticationService) { }
@@ -21,8 +26,15 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  checkLogin() {
-    (this.loginservice.authenticate(this.username, this.password).subscribe(
+  submit() {
+    if(this.form.valid) {
+      this.checkLogin(this.form.value);
+    }
+  }
+
+
+  checkLogin(usuario: Usuario) {
+    (this.loginservice.authenticate(usuario.username, usuario.password).subscribe(
       data => {
         this.router.navigate(['pages'])
         this.invalidLogin = false

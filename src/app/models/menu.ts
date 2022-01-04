@@ -3,4 +3,5 @@ export interface Menu{
    opmDes:string;
    opmEstado:string;
    idModulo:string;
+   urlOperacion:string;
 }

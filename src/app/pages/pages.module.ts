@@ -7,13 +7,18 @@ import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../shared/material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AsistenciaComponent } from './asistencia/asistencia.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { BoletaPagoComponent } from './boleta-pago/boleta-pago.component';
 
 
 
 
 @NgModule({
   declarations: [
-    MiPerfilComponent
+    MiPerfilComponent,
+    AsistenciaComponent,
+    BoletaPagoComponent
   ],
   imports: [
     SharedModule,
@@ -23,7 +28,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     PagesRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    PdfViewerModule
   ]
 })
 export class PagesModule { }

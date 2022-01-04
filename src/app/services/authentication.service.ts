@@ -16,12 +16,13 @@ export class AuthenticationService {
 //store JWT token in session
   authenticate(username:any, password:any) {
     return this.httpClient
-      .post<any>(`${HOST}/authenticate"`, { username, password })
+      .post<any>(`${HOST}/authenticate`, { username, password })
       .pipe(
         map(userData => {
           sessionStorage.setItem("username", username);
           let tokenStr = "Bearer " + userData.token;
           sessionStorage.setItem("token", tokenStr);
+          sessionStorage.setItem("usuario", userData.idUsuario);
           return userData;
         })
       );

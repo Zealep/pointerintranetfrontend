@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BasicAuthHtppInterceptorService } from './services/basic-auth-interceptor.service';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BasicAuthHtppInterceptorService } from './services/basic-auth-intercept
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    PdfViewerModule
 
   ],
   providers: [
