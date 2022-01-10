@@ -12,3 +12,15 @@
 .espacio {
   height: 20px;
 }
+
+img {
+  padding: 1.6rem;
+  width: 300px;
+  height: 2
+  00px;
+}
+
+.image-content{
+  display: flex;
+  flex-direction: column;
+}

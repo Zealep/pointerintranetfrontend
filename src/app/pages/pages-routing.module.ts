@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
 import { AsistenciaComponent } from './asistencia/asistencia.component';
 import { BoletaPagoComponent } from './boleta-pago/boleta-pago.component';
+import { VacacionComponent } from './vacacion/vacacion.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,10 @@ const routes: Routes = [
       {
         path: 'boleta',
         component: BoletaPagoComponent
+      },
+      {
+        path: 'vacaciones',
+        component: VacacionComponent
       }
 
     ]

@@ -1,0 +1,44 @@
+<mat-card>
+  <mat-card-title>
+    Peridos Gozados o Comprados
+  </mat-card-title>
+  <mat-card-subtitle>
+  </mat-card-subtitle>
+  <mat-card-content>
+
+      <mat-form-field>
+          <mat-label>Busqueda</mat-label>
+          <input matInput (keyup)="applyFilter($event)">
+        </mat-form-field>
+      <div>
+        <table mat-table [dataSource]="dataSource" matSort>
+
+
+          <ng-container matColumnDef="periodo">
+            <th mat-header-cell *matHeaderCellDef>  Periodo Vacacional </th>
+            <td mat-cell *matCellDef="let element"> {{element.idPeriodoPll}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="desde">
+              <th mat-header-cell *matHeaderCellDef> Desde </th>
+              <td mat-cell *matCellDef="let element"> {{element.fechaDesde | date:'dd/MM/yyyy'}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="hasta">
+              <th mat-header-cell *matHeaderCellDef>  Hasta </th>
+              <td mat-cell *matCellDef="let element"> {{element.fechaHasta | date:'dd/MM/yyyy'}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="dias">
+              <th mat-header-cell *matHeaderCellDef>  Dias </th>
+              <td mat-cell *matCellDef="let element"> {{element.dias}} </td>
+            </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </div>
+  </mat-card-content>
+</mat-card>

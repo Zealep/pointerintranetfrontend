@@ -36,21 +36,22 @@ export class BoletaPagoComponent implements OnInit {
   }
 
   export(){
+
     let params = new RptBoleta();
-    let periodo = this.date;
+    let periodo = this.date.value;
 
     params.varEmpresa = '01'
     params.varTrabajador = sessionStorage.getItem("usuario")!;
-    //params.varPeriodo = moment(periodo).format('YYYY-MM-DD');
+    params.varPeriodo = moment(periodo).format('YYYY-MM');
+    params.varPeriodo = params.varPeriodo.replace('-','');
 
-console.log('periodo',periodo)
+    console.log('periodo',periodo)
+    console.log('moment',params)
 
     this.reporteService.viewReporteBoleta(params).subscribe(result =>{
 
       var file = new Blob([result], { type: "application/pdf" });
-
       const url = URL.createObjectURL(file);
-
       const iframe = document.createElement('iframe');
       iframe.style.display = 'none';
       iframe.src = url;

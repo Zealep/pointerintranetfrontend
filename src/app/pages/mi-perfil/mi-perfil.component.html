@@ -1,9 +1,18 @@
 <mat-card>
   <mat-card-title>Mi Perfil</mat-card-title>
 <div class="container">
-  <div>
-    <img src="/assets/images/FOTO-CARNET.jpg" alt="" height="160" width="180">
-  </div>
+
+  <div class="image-content">
+    <img mat-card-image [src]="photoBlobUrl">
+
+    <button mat-raised-button color="primary" (click)="fileInput.click()">
+        <input #fileInput type="file" (change)="fileChange($event)" style="display:none;">
+        <mat-icon>file_upload</mat-icon>
+        Subir foto
+  </button>
+
+
+</div>
 
   <div style="margin-left: 3rem;">
     <table>

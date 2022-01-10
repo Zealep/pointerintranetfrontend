@@ -10,6 +10,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AsistenciaComponent } from './asistencia/asistencia.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { BoletaPagoComponent } from './boleta-pago/boleta-pago.component';
+import { VacacionComponent } from './vacacion/vacacion.component';
+import { VerGozadasComponent } from './vacacion/ver-gozadas/ver-gozadas.component';
 
 
 
@@ -18,7 +20,9 @@ import { BoletaPagoComponent } from './boleta-pago/boleta-pago.component';
   declarations: [
     MiPerfilComponent,
     AsistenciaComponent,
-    BoletaPagoComponent
+    BoletaPagoComponent,
+    VacacionComponent,
+    VerGozadasComponent
   ],
   imports: [
     SharedModule,

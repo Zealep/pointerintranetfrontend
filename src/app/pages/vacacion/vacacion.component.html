@@ -1,0 +1,49 @@
+<mat-card>
+  <mat-card-title>
+    Administracion de vacaciones
+  </mat-card-title>
+  <mat-card-subtitle>
+    Periodos Ganados
+  </mat-card-subtitle>
+  <mat-card-content>
+
+      <mat-form-field>
+          <mat-label>Busqueda</mat-label>
+          <input matInput (keyup)="applyFilter($event)">
+        </mat-form-field>
+      <div>
+        <table mat-table [dataSource]="dataSource" matSort>
+
+
+          <ng-container matColumnDef="periodo">
+            <th mat-header-cell *matHeaderCellDef>  Periodo Vacacional </th>
+            <td mat-cell *matCellDef="let element"> {{element.periodo}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="dias">
+              <th mat-header-cell *matHeaderCellDef>  Dias Ganados </th>
+              <td mat-cell *matCellDef="let element"> {{element.vacaciones_Ganadas}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="saldo">
+              <th mat-header-cell *matHeaderCellDef>  Saldo </th>
+              <td mat-cell *matCellDef="let element"> {{element.saldo_Disponible}} </td>
+            </ng-container>
+
+          <ng-container matColumnDef="accion">
+              <th mat-header-cell *matHeaderCellDef> Acciones </th>
+              <td mat-cell *matCellDef="let element">
+                  <button mat-raised-button color="primary" (click)="openDialog(element.idPeriodoPll)">
+                      <mat-icon>visibility</mat-icon>
+                  </button>
+              </td>
+            </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </div>
+  </mat-card-content>
+</mat-card>
