@@ -7,11 +7,12 @@ import { RouterModule } from '@angular/router';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { ProgressSpinnerComponent } from './components/progress-spinner/progress-spinner.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, ConfirmDialogComponent,LoginComponent,LogoutComponent],
+  declarations: [HeaderComponent, ConfirmDialogComponent,LoginComponent,LogoutComponent, ProgressSpinnerComponent],
   imports: [
     CommonModule,
     MaterialModule,
@@ -23,7 +24,8 @@ import { LogoutComponent } from './components/logout/logout.component';
     HeaderComponent,
     ConfirmDialogComponent,
     LogoutComponent,
-    LoginComponent
+    LoginComponent,
+    ProgressSpinnerComponent
   ],
   entryComponents: [ConfirmDialogComponent]
 
