@@ -12,6 +12,9 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { BoletaPagoComponent } from './boleta-pago/boleta-pago.component';
 import { VacacionComponent } from './vacacion/vacacion.component';
 import { VerGozadasComponent } from './vacacion/ver-gozadas/ver-gozadas.component';
+import { FotosComponent } from './fotos/fotos.component';
+import { NoticiaComponent } from './noticia/noticia.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 
 
@@ -22,7 +25,9 @@ import { VerGozadasComponent } from './vacacion/ver-gozadas/ver-gozadas.componen
     AsistenciaComponent,
     BoletaPagoComponent,
     VacacionComponent,
-    VerGozadasComponent
+    VerGozadasComponent,
+    FotosComponent,
+    NoticiaComponent
   ],
   imports: [
     SharedModule,
@@ -33,7 +38,8 @@ import { VerGozadasComponent } from './vacacion/ver-gozadas/ver-gozadas.componen
     HttpClientModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    PdfViewerModule
+    PdfViewerModule,
+    IvyCarouselModule
   ]
 })
 export class PagesModule { }

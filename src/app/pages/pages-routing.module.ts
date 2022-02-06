@@ -6,6 +6,7 @@ import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
 import { AsistenciaComponent } from './asistencia/asistencia.component';
 import { BoletaPagoComponent } from './boleta-pago/boleta-pago.component';
 import { VacacionComponent } from './vacacion/vacacion.component';
+import { FotosComponent } from './fotos/fotos.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,10 @@ const routes: Routes = [
       {
         path: 'vacaciones',
         component: VacacionComponent
+      },
+      {
+        path: 'fotos',
+        component: FotosComponent
       }
 
     ]

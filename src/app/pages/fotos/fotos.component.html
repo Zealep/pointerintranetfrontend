@@ -1,0 +1,55 @@
+<mat-card>
+  <mat-card-title>
+GALERIA DE FOTOS
+  </mat-card-title>
+  <mat-card-content>
+    <br>
+
+    <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            2022
+          </mat-panel-title>
+          <mat-panel-description>
+
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            2021
+          </mat-panel-title>
+          <mat-panel-description>
+
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            2020
+          </mat-panel-title>
+          <mat-panel-description>
+
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <carousel [cellsToShow]="1" [dots]="true" [width]="700" [height]="500" [counter]="true" [arrowsTheme]="'dark'" >
+      <div class="carousel-cell">
+          <img src="./assets/images/FOTO-CARNET.jpg">
+      </div>
+      <div class="carousel-cell">
+        <img src="./assets/images/logocliente.png">
+    </div>
+    <div class="carousel-cell">
+      <img src="./assets/images/pointererp2.png">
+  </div>
+  </carousel>
+  </mat-card-content>
+</mat-card>
