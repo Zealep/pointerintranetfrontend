@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from './material/material.module';
+import { MaterialModule, CustomDateFormat1 } from './material/material.module';
 import { HeaderComponent } from './components/header/header.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -12,7 +12,7 @@ import { ProgressSpinnerComponent } from './components/progress-spinner/progress
 
 
 @NgModule({
-  declarations: [HeaderComponent, ConfirmDialogComponent,LoginComponent,LogoutComponent, ProgressSpinnerComponent],
+  declarations: [HeaderComponent, ConfirmDialogComponent,LoginComponent,LogoutComponent, ProgressSpinnerComponent,CustomDateFormat1],
   imports: [
     CommonModule,
     MaterialModule,
@@ -25,7 +25,8 @@ import { ProgressSpinnerComponent } from './components/progress-spinner/progress
     ConfirmDialogComponent,
     LogoutComponent,
     LoginComponent,
-    ProgressSpinnerComponent
+    ProgressSpinnerComponent,
+    CustomDateFormat1
   ],
   entryComponents: [ConfirmDialogComponent]
 

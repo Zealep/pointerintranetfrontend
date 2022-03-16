@@ -7,6 +7,7 @@ import { AsistenciaComponent } from './asistencia/asistencia.component';
 import { BoletaPagoComponent } from './boleta-pago/boleta-pago.component';
 import { VacacionComponent } from './vacacion/vacacion.component';
 import { FotosComponent } from './fotos/fotos.component';
+import { NoticiaComponent } from './noticia/noticia.component';
 
 
 const routes: Routes = [
@@ -39,8 +40,11 @@ const routes: Routes = [
       {
         path: 'fotos',
         component: FotosComponent
+      },
+      {
+        path: 'noticias',
+        component: NoticiaComponent
       }
-
     ]
   },
 

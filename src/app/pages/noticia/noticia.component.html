@@ -1,1 +1,45 @@
-<p>noticia works!</p>
+<mat-card>
+  <mat-card-title>
+    NOTICIAS
+  </mat-card-title>
+  <mat-card-content>
+    <br>
+
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let n of noticias">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <span class="year">{{n.year}}</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let m of n.meses">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                  <span class="year">{{convertMeses(m.month)}}</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <div class="container">
+              <mat-card class="card-portada" *ngFor="let p of m.principales">
+                <mat-card-header>
+                  <mat-card-title>{{p.titulo}}</mat-card-title></mat-card-header>
+                  <img mat-card-image [src]="transform(p.imagen)" >
+                  <mat-card-content>
+                      <div [innerHtml]="p.html">
+
+                      </div>
+                  </mat-card-content>
+              </mat-card>
+            </div>
+
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-expansion-panel>
+
+
+    </mat-accordion>
+
+  </mat-card-content>
+</mat-card>

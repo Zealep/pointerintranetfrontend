@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Directive, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ReporteService } from '../../services/reporte.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { RptBoleta } from '../../models/dto/rpt-boleta';
 import * as moment from 'moment';
 import { MatDatepicker } from '@angular/material/datepicker';
+import { MAT_DATE_FORMATS } from '@angular/material/core';
 
 @Component({
   selector: 'app-boleta-pago',
@@ -60,11 +61,7 @@ export class BoletaPagoComponent implements OnInit {
 
     });
   }
-
-
-
-
-
-
-
 }
+
+
+

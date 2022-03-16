@@ -5,9 +5,9 @@
 
   <mat-card-content>
 
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" dateMMYYYY>
         <mat-label>Periodo</mat-label>
-        <input matInput [matDatepicker]="dp" [formControl]="date">
+        <input matInput [matDatepicker]="dp" [formControl]="date" >
         <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
         <mat-datepicker #dp
                         startView="multi-year"

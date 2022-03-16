@@ -15,6 +15,7 @@ import { VerGozadasComponent } from './vacacion/ver-gozadas/ver-gozadas.componen
 import { FotosComponent } from './fotos/fotos.component';
 import { NoticiaComponent } from './noticia/noticia.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { FotosCarouselComponent } from './fotos/fotos-carousel/fotos-carousel.component';
 
 
 
@@ -27,7 +28,8 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     VacacionComponent,
     VerGozadasComponent,
     FotosComponent,
-    NoticiaComponent
+    NoticiaComponent,
+    FotosCarouselComponent
   ],
   imports: [
     SharedModule,

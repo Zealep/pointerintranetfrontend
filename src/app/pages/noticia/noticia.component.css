@@ -1,0 +1,22 @@
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+::ng-deep .mat-expansion-panel-body {
+  text-align: center;
+}
+.card-portada{
+  max-width: 600px;
+  margin: 1rem;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+}
+.year{
+  color: rgb(106, 91, 241);
+  font-weight: bold;
+}
+img{
+  width: 300px;
+  height: 300px;
+}

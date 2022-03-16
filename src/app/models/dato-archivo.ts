@@ -1,8 +1,8 @@
 export class DatoArchivo{
-  idDatoArchivoPersona?: string;
-  idEmpresa?: string;
-  idTipoDocumentoIdentidad?:string;
-  numeroDocumento?: string;
+  idDatoArchivo?: string;
+  //idEmpresa?: string;
+  //idTipoDocumentoIdentidad?:string;
+  //numeroDocumento?: string;
   idCodigoRelacional?: string;
   idDocumento?: string;
   idProceso?: string;

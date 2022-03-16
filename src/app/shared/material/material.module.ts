@@ -1,4 +1,4 @@
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule, LOCALE_ID, Directive } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -28,17 +28,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatMomentDateModule,MAT_MOMENT_DATE_ADAPTER_OPTIONS, MomentDateAdapter } from "@angular/material-moment-adapter";
 
 
-export const MY_FORMATS = {
-  parse: {
-    dateInput: 'MM/YYYY',
-  },
-  display: {
-    dateInput: 'MM/YYYY',
-    monthYearLabel: 'MMM YYYY',
-    dateA11yLabel: 'LL',
-    monthYearA11yLabel: 'MMMM YYYY',
-  },
-};
+
 
 @NgModule({
   declarations: [],
@@ -106,11 +96,29 @@ export const MY_FORMATS = {
       provide: DateAdapter,
       useClass: MomentDateAdapter,
       deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
-    },
-
-    {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
+    }
   ]
 })
 export class MaterialModule {
 
+}
+
+export const MY_FORMATS = {
+  parse: {
+    dateInput: 'MM/YYYY',
+  },
+  display: {
+    dateInput: 'MM/YYYY',
+    monthYearLabel: 'MMM YYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY',
+  },
+};
+@Directive({
+  selector: '[dateMMYYYY]',
+  providers: [
+    {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},
+  ],
+})
+export class CustomDateFormat1 {
 }
