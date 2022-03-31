@@ -24,3 +24,8 @@ img {
   display: flex;
   flex-direction: column;
 }
+
+mat-form-field{
+  margin: 0.5rem;
+  width: 100%;
+}

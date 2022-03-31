@@ -12,10 +12,78 @@
         <mat-icon>file_upload</mat-icon>
         Subir foto
   </button>
+</div>
 
+<div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre Completo</mat-label>
+    <input matInput value="{{perfil?.nombreCompleto}}" disabled>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Cumpleaños</mat-label>
+    <input matInput value="{{perfil?.cumpleanos}}" disabled>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de ingreso</mat-label>
+    <input matInput value="{{perfil?.fechaIngreso}}" disabled>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Correo</mat-label>
+    <input matInput value="{{perfil?.correo}}" disabled>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Telefono</mat-label>
+    <input matInput value="{{perfil?.telefonos}}" disabled>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Celular</mat-label>
+    <input matInput value="{{perfil?.telefonos}}" disabled>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Preferencias</mat-label>
+    <input matInput  disabled>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Especialidad</mat-label>
+    <input matInput  disabled>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Reportar a </mat-label>
+    <input matInput value="{{perfil?.jefeDirecto}}" disabled>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Puesto</mat-label>
+    <input matInput  disabled>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Empresa</mat-label>
+    <input matInput value="{{perfil?.empresa}}" disabled>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Gerencia</mat-label>
+    <input matInput  disabled>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Area</mat-label>
+    <input matInput disabled>
+  </mat-form-field>
 
 </div>
 
+<!--
   <div style="margin-left: 3rem;">
     <table>
       <td>
@@ -80,6 +148,8 @@
     </table>
 
   </div>
+-->
+
 </div>
 </mat-card>
 
