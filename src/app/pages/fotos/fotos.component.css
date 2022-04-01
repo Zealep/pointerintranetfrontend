@@ -5,15 +5,18 @@
   text-align: center;
 }
 .card-portada{
-  max-width: 250px;
+  max-width: 300px;
   margin: 1rem;
+  box-sizing: border-box;
 }
 .container{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .year{
   color: rgb(106, 91, 241);
   font-weight: bold;
 }
+
 

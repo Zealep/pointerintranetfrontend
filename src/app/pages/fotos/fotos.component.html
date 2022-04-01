@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-title>
-    GALERIA DE FOTOS
+    Galería de fotos
   </mat-card-title>
   <mat-card-content>
     <br>
@@ -22,6 +22,12 @@
               <mat-card-title>{{key.titulo}}</mat-card-title>
             </mat-card-header>
             <img mat-card-image [src]="key.img" (click)="openCarousel(key.titulo,key.idGaleriaFoto)">
+            <mat-card-content></mat-card-content>
+            <mat-divider inset></mat-divider>
+            <mat-card-actions>
+              <button color="primary" mat-raised-button (click)="openCarousel(key.titulo,key.idGaleriaFoto)" >
+                <mat-icon>search</mat-icon>Ver mas</button>
+            </mat-card-actions>
           </mat-card>
 
         </div>

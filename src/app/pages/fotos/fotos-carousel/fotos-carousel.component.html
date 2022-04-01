@@ -4,16 +4,17 @@
   </mat-card-title>
   <mat-card-content>
     <div class="container">
-    <carousel [cellsToShow]="1" [dots]="true" [width]="700" [height]="500" [counter]="true" [arrowsTheme]="'dark'">
-      <div *ngFor="let i of imgs" class="carousel-cell">
+      <carousel [cellsToShow]="1" [dots]="true" [width]="700" [height]="500" [counter]="true" [arrowsTheme]="'dark'">
+        <div *ngFor="let i of imgs" class="carousel-cell">
           <img [src]="i">
-      </div>
+        </div>
 
 
-  </carousel>
-</div>
+      </carousel>
+    </div>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-button mat-dialog-close>Salir</button>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary" mat-dialog-close>
+      <mat-icon>cancel</mat-icon>Salir</button>
   </mat-card-actions>
 </mat-card>
